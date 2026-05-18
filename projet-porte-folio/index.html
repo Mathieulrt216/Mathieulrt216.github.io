@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home — Mathieu Laurent Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            padding: 15px 25px;
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .home-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            padding: 55px 35px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-label {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            color: #555;
+            font-weight: normal;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+            border: 2px solid #4CAF50;
+        }
+
+        .btn-primary:hover {
+            background-color: #3e8e41;
+            border-color: #3e8e41;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            border-color: #4CAF50;
+            color: #4CAF50;
+        }
+
+        .about-section {
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .about-section h2,
+        .interests-section h2 {
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-section p,
+        .interests-section p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .interests-section {
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .skills-preview {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .skill-tag {
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: #4CAF50;
+            color: #4CAF50;
+            transform: scale(1.03);
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .highlight-box strong {
+            color: #222;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 35px 20px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .about-section,
+            .interests-section {
+                padding: 25px 20px;
+            }
+
+            .about-section p,
+            .interests-section p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="home-container">
+
+        <section class="hero">
+            <div class="hero-label">Welcome to my portfolio</div>
+
+            <h1>Mathieu Laurent</h1>
+
+            <h2>
+                5th-year Engineering Student at Polytech Sorbonne<br>
+                Applied Mathematics and Computer Science
+            </h2>
+
+            <p>
+                I am currently looking for a 6-month final-year internship starting in February 2027.
+                I am interested in opportunities related to data science, artificial intelligence,
+                machine learning, software engineering, cryptography, and mathematical modeling.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="project.html" class="btn btn-primary">View My Projects</a>
+                <a href="resume.html" class="btn btn-secondary">View My Resume</a>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+
+            <p>
+                I am a 5th-year engineering student at Polytech Sorbonne, majoring in Applied Mathematics
+                and Computer Science. My academic background combines strong mathematical foundations with
+                a broad and versatile training in computer science.
+            </p>
+
+            <p>
+                Throughout my studies and projects, I have developed skills in data analysis, machine learning,
+                algorithm design, software development, cryptography, embedded systems, and high performance
+                computing. This multidisciplinary training allows me to approach technical problems with both
+                theoretical rigor and practical implementation skills.
+            </p>
+
+            <p>
+                I enjoy working on challenging problems that require analysis, creativity, and precision.
+                My profile is built around mathematical rigor, curiosity, adaptability, and a strong interest
+                in understanding complex systems.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Currently looking for:</strong>
+                a 6-month final-year internship starting in February 2027, preferably in data science,
+                artificial intelligence, machine learning, software engineering, cryptography, or mathematical modeling.
+            </div>
+        </section>
+
+        <section class="interests-section">
+            <h2>Skills & Interests</h2>
+
+            <p>
+                My technical interests cover both theoretical and applied fields. I am particularly interested
+                in projects where mathematics, algorithms, and programming are used to solve concrete problems.
+            </p>
+
+            <div class="skills-preview">
+                <div class="skill-tag">Data Science</div>
+                <div class="skill-tag">Artificial Intelligence</div>
+                <div class="skill-tag">Machine Learning</div>
+                <div class="skill-tag">Software Engineering</div>
+                <div class="skill-tag">Cryptography</div>
+                <div class="skill-tag">Mathematical Modeling</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">React</div>
+                <div class="skill-tag">R</div>
+                <div class="skill-tag">C / C++</div>
+                <div class="skill-tag">RISC-V Assembly</div>
+                <div class="skill-tag">Embedded Systems</div>
+                <div class="skill-tag">Fortran</div>
+                <div class="skill-tag">SQL</div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
